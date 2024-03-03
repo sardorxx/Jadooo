@@ -1,6 +1,6 @@
 
 
-![logo.png](..%2FfastApiProject%2Flogo.png)
+![logo_right.png](media%2Fshop_home%2Flogo_right.png)
 # Jadoo online market
 
 Todo List
