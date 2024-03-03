@@ -85,11 +85,11 @@ Result:
 
 2.Login Page
 
-![img_1.png](media%2FREADME_IMAGE%2Fimg_1.png)
+![img_03.png](media%2FREADME_IMAGE%2Fimg_03.png)
 
 3.SignUp Page
 
-![img_2.png](media%2FREADME_IMAGE%2Fimg_2.png)
+![img_9.png](media%2FREADME_IMAGE%2Fimg_9.png)
 
 4.Product Page
 

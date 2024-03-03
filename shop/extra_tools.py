@@ -10,8 +10,8 @@ def get_background():
     image = ImageEdit.objects.get(imageedit_id=images.imageedit_id)
     if image.is_edit == 0:
         print(image.image_name)
-        in_put = f"/home/blackthunder/PycharmProjects/Jadooo/media/image/product/{image.image_name}"
-        out_put = f"/home/blackthunder/PycharmProjects/Jadooo/media/image/product/{image.image_name}"
+        in_put = f"/home/blackthunder/PycharmProjects/Jadoo/media/image/product/{image.image_name}"
+        out_put = f"/home/blackthunder/PycharmProjects/Jadoo/media/image/product/{image.image_name}"
         input_img = Image.open(in_put)
         oupt_puts = remove(input_img)
         oupt_puts.save(out_put)
