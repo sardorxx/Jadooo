@@ -2,4 +2,3 @@ Django~=5.0.2
 python-dotenv~=1.0.1
 pillow~=10.2.0
 rembg~=2.0.54
-twilio~=8.13.0
