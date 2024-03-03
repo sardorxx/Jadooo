@@ -1,0 +1,67 @@
+{% extends 'main_page/index.html' %}
+
+{% block title %}Jadoo∙Device{% endblock %}
+{% block content %}
+<style>
+    .table{
+    margin-top: -400px;
+    width: 1500px;
+    margin-left: 5%;
+    }
+    
+.post-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+
+</style>
+     <section>
+            <div>
+                <div>
+                    
+                    <table class="table">
+
+                        <tbody class="tbody">
+                            <tr class="ok">
+                                <td><h2 style="color: dodgerblue">No</h2></td>
+                                <td><h2 style="color: dodgerblue">Device_name</h2></td>
+                                <td><h2 style="color: dodgerblue">Device_IP</h2></td>
+                                <td><h2 style="color: dodgerblue">Last_login</h2></td>
+                                <td><h2 style="color: dodgerblue">Username</h2></td>
+                                <td><h2 style="color: dodgerblue">Location</h2></td>
+                                <td><h2 style="color: dodgerblue">Locked</h2></td>
+                                <td><h2 style="color: dodgerblue">Action</h2></td>
+                            </tr>
+                        </tbody>
+                        
+                        {% for device in devices %}
+                            <tbody id="datahg">
+                                <tr>
+                                <td><h3 style="color: red">*</h3></td>
+                                <td><h3 style="width: 180px">{{ device.device_name }}</h3></td>
+                                <td><h3 style="width: 180px">{{ device.device_ip }}</h3></td>
+                                <td><h3 style="width: 180px">{{ device.last_login }}</h3></td>
+                                <td><h3 style="width: 180px">{{ device.user_device }}</h3></td>
+                                <td><h3 style="width: 180px">{{ device.location}}</h3></td>
+                                <td><h3 style="color: red">{{ device.is_locked }}</h3></td>
+                                <td><button class="post-button" style="background-color: lawngreen"><a href="{% url 'account:lock_ip' device.device_id %}">Lock</a></button></td>
+                                </tr>
+                            </tbody>
+                        {% endfor %}
+
+                    </table>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}

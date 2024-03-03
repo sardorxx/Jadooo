@@ -1,0 +1,81 @@
+
+
+/*Products*/
+
+.sec_social{
+    padding: 450px 18%;
+ }
+.socials{
+    display: inline-flex;
+    grid-auto-columns: auto;
+}
+.socials .social_cards{
+    width: 280px;
+    background: cyan;
+    box-shadow: 0 100px 200px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.socials .social_cards img{
+    height: 100%;
+    width: 100%;
+}
+
+.socials .social_cards .desc{
+    padding: 5px 20px;
+    opacity: 0.8;
+}
+
+.socials .social_cards .title{
+    font-weight: 900;
+    font-size: 20px;
+    color: green;
+    padding: 0 20px;
+}
+
+
+.socials .social_cards .box_card{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.socials .social_cards .box_card .price{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.socials .social_cards .box_card .btn_social{
+     font-size: 13px;
+    color: red;
+    padding: 10px 18px;
+    font-weight: 900;
+    border: 1px solid red;
+    border-radius: 20px;
+}
+
+
+.socials .social_cards .box_card .btn_social:hover{
+    cursor: pointer;
+    background-color: mediumpurple;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

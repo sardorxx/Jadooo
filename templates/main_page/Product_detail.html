@@ -1,0 +1,118 @@
+{% extends 'main_page/index.html' %}
+
+{% block title %}Jadoo∙Product Detail{% endblock %}
+{% block content %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    .product-container {
+        width: 1500px;
+        height: 800px;
+        {#margin: 50px auto;#}
+        background-color: deepskyblue;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border-radius: 40px;
+        margin-top: 100px;
+    }
+    .product-image {
+        max-width: 50%;
+        height: auto;
+        border-radius: 5px;
+        margin-right: 20px;
+    }
+    .product-details {
+        width: 50%;
+        text-align: left;
+    }
+    h2 {
+        color: #333;
+    }
+    p {
+        color: #666;
+    }
+    .price {
+        color: mediumpurple;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    .buy-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: mediumpurple;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin-top: 20px;
+    }
+    .buy-btn:hover {
+        background-color: green;
+    }
+    .counter-container {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .counter-btn {
+        background-color: mediumpurple;
+        color: #fff;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    .quantity {
+        font-size: 1.2em;
+        margin: 0 10px;
+    }
+    img{
+        width: 400px;
+        height: 500px;
+    }
+</style>
+<div class="product-container">
+    <h2><img src="{{ product.image.url }}" alt=""></h2>
+    <div class="product-details">
+        <h2>{{ product.name }}</h2>
+        <hr>
+        <h6>Description:</h6>
+        <p>{{ product.description }}</p>
+        <hr>
+        <h6>For who</h6>
+        <p>{{ product.for_who }}</p>
+        <hr>
+        <h6>Price:</h6>
+        <p>{{ product.price }}$ ~ {{ price_sum }} sum</p>
+        <hr>
+        <h6>Color:</h6>
+        <p>{{ product.color }}</p>
+        <hr>
+        <h6>Amount:</h6>
+        <p>{{ product.amount_of_products }}</p>
+        <hr>
+        <h6>Seller:</h6>
+        <p>{{ product.seller }}</p>
+        <div class="counter-container">
+            <button class="counter-btn" onclick="decrement()">-</button>
+            <span class="quantity" id="quantity">1</span>
+            <button class="counter-btn" onclick="increment()">+</button>
+        </div>
+        <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+</div>
+
+
+<script src="../../static/main_page/product_detail.js"></script>
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'main_page/index.html' %}
+
+{% block title %}Jadoo∙Settings{% endblock %}
+
+
+{% block content %}
+    {% for result in question_answer %}
+        <form>
+            <div class="input-box">
+                <h1>{{ result.question_text }}</h1>
+                <h3>{{ result.answer_text }}</h3>
+            </div>
+        </form>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'main_page/index.html' %}
+
+{% block title %}Jadoo∙News{% endblock %}
+
+
+{% block content %}
+    {% for result in question_answer %}
+        <form>
+            <div class="input-box">
+                {% if news.image %}
+                    <h1><img src="{{ news.image.url }}" alt=""></h1>
+                    <p>{{ news.text }}</p>
+                    <p>{{ news.created_date }}</p>
+                {% else %}
+                    <p>{{ news.text }}</p>
+                    <p>{{ news.created_date }}</p>
+                {% endif %}
+            </div>
+        </form>
+    {% endfor %}
+
+{% endblock %}
