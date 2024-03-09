@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # installs
+    'rest_framework',
+    'debug_toolbar',
 
     # locals
     'account.apps.AccountConfig',
@@ -53,7 +56,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
+    # \dbuger
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     # local
     'account.middlewares.IPLockMiddleware'
 ]
@@ -75,6 +79,10 @@ TEMPLATES = [
             ],
         },
     },
+    # {
+    #     "BACKEND": "django.template.backends.django.DjangoTemplates",
+    #     "APP_DIRS": True,
+    # },
 ]
 
 WSGI_APPLICATION = 'Jadooo.wsgi.application'
@@ -128,6 +136,9 @@ AUTH_USER_MODEL = 'account.CustomUser'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
+# INSTALLED_APPS = [
+#     "django.contrib.staticfiles",
+# ]
 
 STATIC_URL = 'static/'
 if DEBUG:
@@ -144,4 +155,9 @@ MEDIA_ROOT = BASE_DIR / 'media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = 'account:login'
 LOGIN_REDIRECT_URL = 'shop:home'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
 

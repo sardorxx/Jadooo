@@ -23,9 +23,16 @@ urlpatterns = [
     path('', include('shop.urls')),
     path('admin/', admin.site.urls),
     path('account/', include('account.urls')),
-    path('features/', include('features.urls'))
-
+    path('features/', include('features.urls')),
+    path('__debug__/', include('debug_toolbar.urls'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+urlpatterns_api = [
+    path('shop/api/v1/', include('shop.api.v1.urls')),
+    path('payment/api/v1/', include('payment.api.v1.urls')),
+]
+
+urlpatterns += urlpatterns_api
