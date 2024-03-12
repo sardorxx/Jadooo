@@ -1,0 +1,60 @@
+{% extends 'right_sidebar/base_personal.html' %}
+
+{% block title %}Jadoo∙Personal{% endblock %}
+{% block content %}
+    <section class="p-3">
+            <div class="row">
+                <div class="col-12">
+                    <table class="table table-striped table-hover mt-3 text-center table-bordered">
+                        
+                        <thead>
+                            <tr>
+                                <th>-</th>
+                                <th>-</th>
+                                <th>-</th>
+                                <th>-</th>
+                                <th>-</th>
+                                <th>-</th>
+                            </tr>
+                        </thead>
+                        
+                        
+                    
+                        <thead>
+                            <tr>
+                                <th>Picture</th>
+                                <th>Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total $</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        {% for item in baskets %}
+                            <tbody id="data">
+                            <tr>
+                            {% if item.product.image %}
+                                <td><img src="{{ item.product.image.url }}" alt="" width="50" height="50" style="border-radius: 50%"> </td>
+                            {% else %}
+                                <td><img src="../../media/right_sidebar/no-image.png" alt="" width="50" height="50"> </td>
+                            {% endif %}
+                            <td>{{ item.product.name }}</td>
+                            <td>{{ item.quantity }}</td>
+                            <td>{{ item.product.price }}$</td>
+                            <td>{{ item.total_price }}$</td>
+                            <td>
+                                <button class="btn btn-success"><a href="{% url 'shop:home' %}"><i class='bx bx-cart-download' style='color:#eaeaea'  ></i></a></button>
+                                <button class="btn btn-primary" ><a href="{% url 'shop:product_detail' product_id=item.product.product_id %}"><i class='bx bxs-show' style='color:#eaeaea' ></i></a></button>
+                                <button href="#" class="btn btn-danger"><a href="{% url 'shop:delete_from_basket' product_id=item.product.product_id %}"><i class='bx bxs-trash' style='color:#eaeaea' ></i></a></button>
+                            </td>
+                            </tr>
+                            </tbody>
+                        {% endfor %}
+                    
+                    </table>
+                </div>
+            </div>
+
+        </section>
+{% endblock %}

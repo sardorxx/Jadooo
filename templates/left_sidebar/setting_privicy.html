@@ -1,0 +1,42 @@
+{% extends 'main_page/index.html' %}
+
+{% block title %}Jadoo∙Settings{% endblock %}
+
+
+{% block content %}
+    <style>
+ body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin-top: 250px;
+ }
+
+        .input-boxss {
+            width: 100%; /* Adjust the width as needed */
+            padding: 5px;
+            margin-bottom: -50px;
+            
+        }
+
+    </style>
+<body>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+    {% for result in question_answer %}
+        
+        <form>
+            <div class="input-boxss">
+                <h1>{{ result.question_text }}</h1>
+                <h3>{{ result.answer_text }}</h3>
+            </div>
+        </form>
+    {% endfor %}
+</body>
+
+{% endblock %}

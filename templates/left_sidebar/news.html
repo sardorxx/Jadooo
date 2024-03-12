@@ -1,0 +1,40 @@
+{% extends 'main_page/index.html' %}
+
+{% block title %}Jadoo∙News{% endblock %}
+
+
+{% block content %}
+       <style>
+ body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+ }
+
+        .input-boxss {
+            width: 100%; /* Adjust the width as needed */
+            padding: 5px;
+            margin-bottom: -50px;
+            
+        }
+
+    </style>
+    <body>
+    {% for news in news_list %}
+        <form>
+            <div class="input-boxss">
+                {% if news.image %}
+                    <h1><img src="{{ news.image.url }}" alt=""></h1>
+                    <p>{{ news.text }}</p>
+                    <p>{{ news.created_date }}</p>
+                {% else %}
+                    <p>{{ news.text }}</p>
+                    <p>{{ news.created_date }}</p>
+                {% endif %}
+            </div>
+        </form>
+    {% endfor %}
+</body>
+{% endblock %}

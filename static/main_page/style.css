@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css?family=Pappins:400,500,700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    min-height: 100%;
+    background: white;
+
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: green;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+}
+
+.logo .menu-icon{
+    color: darkblue;
+    font-size: 24px;
+    margin-right: 14px;
+    cursor: pointer;
+
+}
+
+.logo .logo-name{
+    color: dodgerblue;
+    font-size: 29px;
+    font-weight: 500;
+}
+
+nav img{
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+nav .sidebar{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 260px;
+    padding: 20px 0;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+nav.open .sidebar{
+    left: 0;
+}
+
+.sidebar .sidebar-content{
+    display: flex;
+    height: 96%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 16px;
+}
+
+.sidebar-content .list{
+    list-style: none;
+}
+
+.list .nav-link{
+    display: flex;
+    align-items: center;
+    padding: 14px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.lists .nav-link:hover{
+    background-color: green;
+}
+
+
+.nav-link .icon{
+    margin-right: 14px;
+    font-size: 20px;
+    color: blue;
+}
+
+.nav-link .link{
+    font-size: 16px;
+    color: rebeccapurple;
+    font-weight: 400;
+}
+
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link{
+    color: white;
+}
+
+.overlay{
+    height: 1000vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    background: rgba(120, 225, 13, 44);
+}
+
+
+nav.open .overlay{
+    opacity: 1;
+    left: 250px;
+    pointer-events: auto;
+
+}
+
+/*RIGHT bar*/
+.sidebar1 {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 260px;
+    padding: 20px 0;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+
+.logo1 {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+}
+
+.logo-name1 {
+    color: dodgerblue;
+    font-size: 1.5rem;
+}
+
+.logo1 .menu-icon1{
+    color: darkblue;
+    font-size: 24px;
+    margin-right: 14px;
+    cursor: pointer;
+
+}
+
+.logo1 .logo-name1{
+    color: dodgerblue;
+    font-size: 29px;
+    font-weight: 500;
+}
+nav .logo1{
+    margin-left: auto;
+}
+
+
+.sidebar1 .sidebar-content1{
+    display: flex;
+    height: 96%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 16px;
+}
+
+.sidebar-content1 .list1{
+    list-style: none;
+}
+
+.list1 .nav-link1{
+    display: flex;
+    align-items: center;
+    padding: 14px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.lists1 .nav-link1:hover{
+    background-color: green;
+}
+
+.nav-link1 .icon1{
+    margin-right: 14px;
+    font-size: 20px;
+    color: blue;
+}
+
+.nav-link1 .link1{
+    font-size: 16px;
+    color: rebeccapurple;
+    font-weight: 400;
+}
+
+.lists1 {
+    list-style: none;
+    padding: 0;
+}
+
+.list1 {
+    margin-bottom: 15px;
+}
+
+.nav-link1 {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: blue;
+}
+
+.lists1 .nav-link1:hover .icon1,
+.lists1 .nav-link1:hover .link1{
+    color: white;
+}
+
+.nav-link1:hover {
+    color: green;
+}
+
+.icon1 {
+    margin-left: 10px;
+}
+
+.overlay1 {
+    height: 1000vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    background: rgba(120, 225, 13, 44);
+}
+
+nav.open1 .overlay1{
+    opacity: 1;
+    right: 250px;
+    pointer-events: auto;
+
+}
+nav.open1 .sidebar1{
+    right: 0;
+}
+
+
+/*Search*/
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.search-container {
+    position: relative;
+}
+
+#searchInput {
+    width: 500px;
+    padding: 8px;
+    border: none;
+    background-color: mediumpurple;
+    border-radius: 20px;
+    outline: none;
+    transition: width 0.4s ease-in-out;
+}
+
+#searchInput:focus {
+    width: 250px;
+}
+/*PRODUCT*/
+
+
+
+
+/*Products*/
+
+.sec{
+    margin-top: 80px;
+    padding: 10px 5%;
+ }
+.products{
+    display: inline-block;
+    grid-auto-columns: auto;
+}
+.products .card{
+    width: 310px;
+    background: dodgerblue;
+    box-shadow: 0 100px 200px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.products .card img{
+    height: 290px;
+    width: 100%;
+}
+
+.products .card .desc{
+    padding: 5px 20px;
+    opacity: 0.8;
+}
+
+.products .card .title{
+    font-weight: 900;
+    font-size: 20px;
+    color: green;
+    padding: 0 20px;
+}
+
+
+.products .card .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.products .card .box .price{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.products .card .box .btn{
+     font-size: 13px;
+    color: red;
+    padding: 10px 18px;
+    font-weight: 900;
+    border: 1px solid red;
+    border-radius: 20px;
+}
+
+
+.products .card .box .btn:hover{
+    cursor: pointer;
+    background-color: mediumpurple;
+    color: white;
+}
+
