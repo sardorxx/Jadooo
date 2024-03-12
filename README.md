@@ -102,7 +102,7 @@ Result:
 
 ![img_6.png](media%2FREADME_IMAGE%2Fimg_6.png)
 
-7.Top Products
+7.Add Cards
 
 ![img_7.png](media%2FREADME_IMAGE%2Fimg_7.png)
 
